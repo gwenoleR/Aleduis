@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+        <title>Supervision monitor - Potion Quest</title>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="./function.js"></script>
+        <script>
+        	$(function(){
+        		getJSONData();
+			});
+		</script>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body>
+		<div class="header">
+			<span class="mainTitle">Potion Quest - Supervision monitor</span>
+		</div>
+		<div class="game">
+			Choisir une partie : 
+			<select id="gamesList" size="1"></select>
+		</div>
+		<div id="leftScreen">
+			<div class="topScreen">
+				<div class="header">
+					<span class="subtitle">Informations de la carte</span>
+				</div>
+				<ul class="ParametersListOfGame">
+					<li>Nom de la partie : <span id="gameName" class="boldValue">Nom de la partie</span></li>
+					<li>Type de jeu : <span id="gameType" class="boldValue">Pièces</span></li>
+					<li>Taille de la carte : <span id="gameMapWidth" class="boldValue">XX</span> x <span id="gameMapHeight" class="boldValue">YY</span></li>
+					<li>Nombre de joueurs max. : <span id="gameMaxPlayers" class="boldValue">15</span></li>
+					<li>Pièces restantes : <span id="gameGoldLeft" class="boldValue">n</span> / <span id="gameGoldTotal">Total</span></li>
+					<li>Coffres restantes : <span id="gameChestLeft" class="boldValue">n</span> / <span id="gameChestTotal">Total</span></li>
+					<li>Potions restantes : <span id="gamePotionsLeft" class="boldValue">n</span> / <span id="gamePotionsTotal">Total</span></li>
+					<li>Temps par tours : <span id="gameTimeByTurn" class="boldValue">n</span> secondes</li>
+				</ul>
+			</div>
+			<div class="separator">--------------------------------------------------------</div>
+			<div class="bottomScreen">
+				<div class="header">
+					<span class="subtitle">Créer une nouvelle partie</span>
+				</div>
+				<div class="aLine">
+					<span class="leftLine">Nom : <input id="newGameName" type="text"></span>
+					<span class="centerLine">Taille : <input id="newGameMapWidth" type="text" placeholder="w"> x <input id="newGameMapHeight" type="text" placeholder="h"></span>
+					<span class="rightLine">Max. joueurs : <input id="newGameMaxPlayers" type="text"></span>
+				</div>
+				<div class="aLine">
+					<span class="leftLine">Vision : <input id="newGamePlayerVision" type="text"></span>
+					<span class="centerLine">Pièces : <input id="newGameGoldNumber" type="text"></span>
+					<span class="rightLine">Coffres : <input id="newGameChestNumber" type="text"></span>
+				</div>
+				<div class="aLine">
+					<span class="leftLine">Potions : <input id="newGamePotionNumber" type="text"></span>
+					<span class="centerLine">Temps : <input id="newGameTimeByTurn" type="text"> sec</span>
+					<span class="rightLine">Type de partie : <select id="newGameType" size="1"><option selected>Pieces<option>Objets<option>Tours</select></span>
+				</div>
+				<div class="aLine">
+					<span class="rightLine">Combien ? : <input id="newGameTypeObjectNumber" type="text"></span>
+				</div>
+				<button id="createTheGame">Créer</button>
+				<br>
+			</div>
+			<div class="separator">--------------------------------------------------------</div>
+			<div class="Map">	
+				<div id="mondiv"></div>
+			</div>
+		</div>
+		<div id="rightScreen">
+			<div class="topScreen">
+				<div class="header">
+					<span class="subtitle">Classement</span>
+				</div>
+				<div id="rankArray">
+					<div class="aLineTitle">
+						<span class="rankPlayer">Joueur</span>
+						<span class="rankScore">Score</span>
+						<span class="rankGold">Pièces</span>
+						<span class="rankPosition">Position</span>
+						<span class="rankVision">Vision</span>
+						<span class="rankPlace">Place</span>
+					</div>
+					<div id="rankArrayUpdatable">
+						<br>
+						<div class="aLine" id="P1">
+							<span class="rankPlayer">J1</span>
+							<span class="rankScore">1002</span>
+							<span class="rankGold">140</span>
+							<span class="rankPosition">12,4</span>
+							<span class="rankVision">1</span>
+							<span class="rankPlace">1</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="separator">--------------------------------------------------------</div>
+			<div class="bottomScreen">
+				<div class="header">
+					<span class="subtitle">Inventaire</span>
+
+				</div>
+				<select id="playersList" size="1"></select>	
+				<span id="playerCoinsNumber"> </span>
+				<ul id="playerPotionsList"></ul>
+			</div>
+		</div>
+		
+	</body>	
+	<script>
+		$("#playersList").change(function(){
+			refreshPlayerInventory($("#playersList option:selected").text());
+		});
+		$("#gamesList").change(function(){
+			console.log($("#gamesList option:selected").attr("value"));
+			getJSONGameData($("#gamesList option:selected").attr("value"));
+		});
+	</script>
+</html>

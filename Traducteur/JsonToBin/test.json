@@ -1,0 +1,91 @@
+{"mapView": [[{
+   "x": 1, "y": 2,
+   "isObstacle": false, 
+   "skin": "00010000",
+   "players": ["tata"],
+   "contains": {
+     "kind": "",
+     "skin": "01000000"
+    }
+ }],
+ [{
+   "x": 0, "y": 1,
+   "isObstacle": false, 
+   "skin": "00000000",
+   "players": ["toto"],
+   "contains": {
+     "kind": "",
+     "skin": ""
+    }
+ }],
+ [{
+   "x": 0, "y": 2,
+   "isObstacle": true, 
+   "skin": "01000000",
+   "players": [],
+   "contains": {
+     "kind": "",
+     "skin": ""
+    }
+ }],
+ [{
+   "x": 1, "y": 0,
+   "isObstacle": false, 
+   "skin": "00000000",
+   "players": [],
+   "contains": {
+     "kind": "",
+     "skin": ""
+    }
+ }],
+ [{
+   "x": 1, "y": 1,
+   "isObstacle": true, 
+   "skin": "01000000",
+   "players": [],
+   "contains": {
+     "kind": "",
+     "skin": ""
+    }
+ }],
+ [{
+   "x": 1, "y": 2,
+   "isObstacle": false, 
+   "skin": "00000000",
+   "players": [],
+   "contains": {
+     "kind": "potion",
+     "skin": ""
+    }
+ }],
+ [{
+   "x": 2, "y": 0,
+   "isObstacle": false, 
+   "skin": "00000000",
+   "players": ["tata"],
+   "contains": {
+     "kind": "",
+     "skin": ""
+    }
+ }],
+ [{
+   "x": 2, "y": 1,
+   "isObstacle": false, 
+   "skin": "00000000",
+   "players": [],
+   "contains": {
+     "kind": "chest",
+     "skin": ""
+    }
+ }],
+ [{
+   "x": 2, "y": 2,
+   "isObstacle": false, 
+   "skin": "00000000",
+   "players": ["titi"],
+   "contains": {
+     "kind": "",
+     "skin": ""
+    }
+ }]]
+}

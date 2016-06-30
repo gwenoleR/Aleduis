@@ -1,0 +1,11 @@
+[[{
+			"x":	1,
+			"y":	2,
+			"isObstacle":	"false",
+			"skin":	"00010000",
+			"players":	[],
+			"contains":	{
+				"kind":	"01000000",
+				"skin":	"ö†"
+			}
+		}]]

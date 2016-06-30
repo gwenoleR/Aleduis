@@ -1,0 +1,170 @@
+/*	
+	Style CSS pour Supervision - Potion Quest 
+  	par Valentin 
+  	le 24/06/2014 à 20:28
+*/
+
+.login{
+	text-align: center;
+	border-radius: 25px;
+    border: 2px solid #73AD21;
+    width: 350px;
+    height: 100px;
+    padding-top: 25px;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    margin-top: 15vh;
+}
+.login input{
+	width: 150px;
+}
+
+.topScreen {
+	height: 35vh;
+	border-radius: 25px;
+    border: 2px solid #73AD21;
+}
+
+.bottomScreen {
+	border-radius: 25px;
+    border: 2px solid #73AD21;
+}
+
+.header {
+	text-align: center;
+	padding-bottom: 50px;
+}
+.mainTitle {
+    font-size: 30px;
+    font-weight: bold;  
+}
+
+span.boldValue {
+	font-weight: bold; 
+}
+
+.game{
+	padding-left:120px;
+	margin-bottom: 30px;
+	line-height: 30px;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: bold; 
+}
+#leftScreen {
+	position:relative;
+	float:left;
+    width:59%;
+}
+
+#leftScreen .bottomScreen{
+	height: 200px;
+}
+
+#leftScreen .bottomScreen button {
+	margin-right:15px;
+	margin-top: -5px;
+}
+#leftScreen .topScreen{
+	height: 350px;
+}
+
+#rightScreen {
+	position:relative;
+	float:right;
+    width:39%;
+}
+
+ul.ParametersListOfGame{
+	margin-left: 40px;
+	list-style-type:none;
+	line-height:25px;
+}
+.aLine .aLineTitle{
+	width:100%;
+	line-height: 40px;
+}
+
+span.leftLine{
+	padding-left: 4%;
+	float: left;
+	width:30%;
+}
+
+span.centerLine {
+	float: left;
+	width:30%;
+}
+
+span.rightLine {	
+	float: left;
+	width:30%;
+}
+
+#createTheGame{
+	margin-top:40px;
+	float: right;
+}
+
+input {
+	width: 20px;
+}
+
+#rankArray{
+	text-align:center;
+}
+
+#newGameName {
+	width: 120px;
+}
+
+span.rankPlayer {
+	float: left;
+	width:15%;
+}
+
+span.rankScore {
+	float: left;
+	width:15%;
+}
+
+span.rankGold {
+	float: left;
+	width:15%;
+}
+
+span.rankPosition {
+	float: left;
+	width:15%;
+}
+
+span.rankVision {
+	float: left;
+	width:15%;
+}
+
+span.rankPlace {
+	float: left;
+	width:15%;
+}
+
+.separator {
+	text-align: center;
+}
+
+#sqlCommands {
+	margin-top : -10px;
+	margin-left: 40px;
+}
+
+#Map {
+	border-radius: 25px;
+    border: 2px solid #73AD21;
+    width: 350px;
+    height: 100px;
+	position:relative;
+	float:left;
+        width:59%;
+}
